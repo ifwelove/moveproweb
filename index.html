@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樂遷搬家 - 台北精緻搬家首選</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #ffa726 0%, #fb8c00 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 導航欄 -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-orange-500">樂遷搬家</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-orange-500">首頁</a>
+                    <a href="#services" class="text-gray-700 hover:text-orange-500">服務項目</a>
+                    <a href="#about" class="text-gray-700 hover:text-orange-500">關於我們</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-orange-500">客戶評價</a>
+                    <a href="#contact" class="text-gray-700 hover:text-orange-500">聯絡我們</a>
+                    <a href="https://movepro.very6.tw/public/pricing/index.html" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition duration-300">線上估價</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-orange-500">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- 移動端選單 -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-orange-500">首頁</a>
+                    <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-orange-500">服務項目</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-orange-500">關於我們</a>
+                    <a href="#testimonials" class="block px-3 py-2 text-gray-700 hover:text-orange-500">客戶評價</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-orange-500">聯絡我們</a>
+                    <a href="https://movepro.very6.tw/public/pricing/index.html" target="_blank" class="block px-3 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-300">線上估價</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首頁橫幅 -->
+    <section id="home" class="pt-16">
+        <div class="relative gradient-bg h-[600px] overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="absolute inset-0">
+                <img src="images/moving-banner.jpg" 
+                     alt="搬家服務" 
+                     class="w-full h-full object-cover">
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 h-full flex items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">即日起搬家最低1,500元起！</h1>
+                    <p class="text-lg md:text-xl mb-8">25分鐘免費到府報價，享受免動手、免打包的無痛懶人搬家</p>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                        <button class="bg-white text-orange-500 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition duration-300 hover-scale">
+                            立即預約
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-orange-500 transition duration-300 hover-scale">
+                            加LINE諮詢
+                        </button>
+                        <a href="https://movepro.very6.tw/public/pricing/index.html" target="_blank" class="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300 hover-scale text-center">
+                            線上估價
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務項目 -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">我們的服務</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-scale">
+                    <img src="images/residential-moving.jpg" 
+                         alt="住宅搬家" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <i class="fas fa-home text-4xl text-orange-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">住宅搬家</h3>
+                    <p class="text-gray-600 mb-4">女生套房搬家、學生搬家、家庭搬遷，專業團隊細心呵護您的物品。</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>專業包裝服務</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>家具拆裝服務</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>免費紙箱提供</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>24小時服務</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-scale">
+                    <img src="images/commercial-moving.jpg" 
+                         alt="商業搬遷" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <i class="fas fa-building text-4xl text-orange-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">商業搬遷</h3>
+                    <p class="text-gray-600 mb-4">搬公司、搬店面、搬辦公室、搬倉庫、工廠遷移，專業團隊效率搬遷。</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>辦公設備搬運</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>倉儲設備搬運</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>工廠設備搬運</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>假日搬遷服務</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-scale">
+                    <img src="images/special-moving.jpg" 
+                         alt="特殊服務" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <i class="fas fa-box text-4xl text-orange-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">特殊服務</h3>
+                    <p class="text-gray-600 mb-4">鋼琴搬運、吊車服務、古董家具搬運、廢棄物清運，專業團隊安全搬運。</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>鋼琴專業搬運</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>吊車服務</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>廢棄物清運</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>古董家具搬運</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務流程 -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">搬家流程</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">免費估價</h3>
+                    <p class="text-gray-600">25分鐘內到府免費估價，提供詳細報價單</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">確認預約</h3>
+                    <p class="text-gray-600">確認搬家日期，安排專業搬家團隊</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">專業搬運</h3>
+                    <p class="text-gray-600">專業團隊細心搬運，確保物品安全</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">完成服務</h3>
+                    <p class="text-gray-600">物品定位，環境整理，滿意度調查</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 安心保證 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">三大安心保證</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="text-center">
+                        <i class="fas fa-file-invoice text-4xl text-orange-500 mb-4 floating"></i>
+                        <h3 class="text-xl font-semibold mb-2">提供估價單</h3>
+                        <p class="text-gray-600">絕不坐地起價，搬家好可靠</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-4xl text-orange-500 mb-4 floating"></i>
+                        <h3 class="text-xl font-semibold mb-2">毀損必賠償</h3>
+                        <p class="text-gray-600">輕手輕腳最溫柔，放心好搬家</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="text-center">
+                        <i class="fas fa-user-tie text-4xl text-orange-500 mb-4 floating"></i>
+                        <h3 class="text-xl font-semibold mb-2">師傅素質高</h3>
+                        <p class="text-gray-600">不菸不酒不檳榔不打赤膊！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客戶評價 -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">客戶評價</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-orange-500"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">張小姐</h4>
+                            <p class="text-gray-500">台北市</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"搬家師傅非常專業，細心包裝所有物品，價格也很合理，非常推薦！"</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-orange-500"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">李先生</h4>
+                            <p class="text-gray-500">新北市</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"服務態度很好，準時到達，搬運過程很小心，完全沒有損壞任何物品。"</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-orange-500"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">王先生</h4>
+                            <p class="text-gray-500">桃園市</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"價格透明，沒有額外收費，師傅們都很專業，搬家過程很順利。"</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 優惠活動 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-lg p-8 text-center shadow-xl">
+                <h2 class="text-3xl font-bold mb-4">本月限額優惠！</h2>
+                <p class="text-xl mb-4">加LINE立即獲得500元搬家優惠金！</p>
+                <p class="text-lg mb-8">本月限額：11名</p>
+                <button class="bg-white text-orange-500 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition duration-300 hover-scale">
+                    立即領取優惠
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡表單 -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">聯絡我們</h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">姓名</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-orange-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">電話</label>
+                        <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-orange-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">搬家需求</label>
+                        <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-orange-500" rows="4"></textarea>
+                    </div>
+                    <button class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition duration-300 hover-scale">
+                        送出表單
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">樂遷搬家</h3>
+                    <p class="text-gray-400">台北精緻搬家我最優質！</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">聯絡資訊</h3>
+                    <p class="text-gray-400">電話：0979-332-138</p>
+                    <p class="text-gray-400">LINE：@movepro</p>
+                    <p class="text-gray-400">服務範圍：台北市、新北市、桃園市、基隆市、新竹市等北部地區</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">營業時間</h3>
+                    <p class="text-gray-400">週一到週日</p>
+                    <p class="text-gray-400">AM 8:00 - PM 23:00</p>
+                    <p class="text-gray-400">24小時服務派車</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 樂遷搬家. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 表單提交處理
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感謝您的諮詢，我們會盡快與您聯繫！');
+            this.reset();
+        });
+
+        // 滾動動畫
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // 移動端選單
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // 點擊選單項目後關閉選單
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html> 
